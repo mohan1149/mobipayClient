@@ -9,6 +9,7 @@ enableScreens();
 const Stack = createNativeStackNavigator();
 
 import WalkThrough from './walkthrough/WalkThrough';
+import UserRegister from './auth/UserRegister';
 import UserHome from './home/UserHome';
 import UserLogin from './auth/UserLogin';
 import Loading from './Loading';
@@ -25,37 +26,52 @@ export default class Routes extends React.Component {
     }
     render() {
         let Initail = Loading;
-        if(this.state.isFirstTime){
+        if (this.state.isFirstTime) {
             Initail = WalkThrough;
-        }else if(!this.state.isLogged){
+        } else if (!this.state.isLogged) {
             Initail = UserLogin;
         }
         return (
             <NavigationContainer>
                 <Stack.Navigator>
-                    <Stack.Screen name="Initail" component={Initail} options={{ headerShown: false }} />
-                    <Stack.Screen name="home" component={UserHome} options={{ headerShown: false }} />
-                    <Stack.Screen name="user-activity" component={UserActivity} 
-                        options={{                             
-                            headerTitle:I18n.t('youractivity'),
-                            headerTintColor:'black',
-                            headerHideShadow:true,
-                            headerBackTitleVisible:false
-                        }} 
+                    <Stack.Screen name="Initail" component={WalkThrough}
+                        options={{
+                            headerShown: false
+                        }} />
+                    <Stack.Screen name="user-register" component={UserRegister}
+                        options={{
+                            headerShown: true,
+                            headerBackTitleVisible:false,
+                            headerTintColor: 'black',
+                            headerHideShadow: true,
+                            headerTitle: I18n.t('signup'),
+
+                        }} />
+                    <Stack.Screen name="home" component={UserHome}
+                        options={{
+                            headerShown: false
+                        }} />
+                    <Stack.Screen name="user-activity" component={UserActivity}
+                        options={{
+                            headerTitle: I18n.t('youractivity'),
+                            headerTintColor: 'black',
+                            headerHideShadow: true,
+                            headerBackTitleVisible: false,                            
+                        }}
                     />
                     <Stack.Screen name="create-payment" component={CreatePayment}
                         options={{
-                            headerShown:false,
-                            headerHideShadow:false,
-                            headerTintColor:'black',                                                     
-                        }} 
+                            headerShown: false,
+                            headerHideShadow: false,
+                            headerTintColor: 'black',
+                        }}
                     />
                     <Stack.Screen name="make-payment" component={MakePayment}
                         options={{
-                            headerShown:false,
-                            headerHideShadow:false,
-                            headerTintColor:'black',                                                                            
-                        }} 
+                            headerShown: false,
+                            headerHideShadow: false,
+                            headerTintColor: 'black',
+                        }}
                     />
                 </Stack.Navigator>
             </NavigationContainer>

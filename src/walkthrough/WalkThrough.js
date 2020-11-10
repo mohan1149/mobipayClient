@@ -26,6 +26,7 @@ export default class WalkThrough extends React.Component {
         );
     }
     moveToUserRegister() {
+        this.props.navigation.navigate('user-register');
         AsyncStorage.setItem('isFirstTime', 'no');
     }
 }

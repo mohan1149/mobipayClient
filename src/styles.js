@@ -1,7 +1,7 @@
 import { StyleSheet ,Dimensions} from 'react-native';
 const Styles = StyleSheet.create({
     main_theme:{
-        backgroundColor:'#fdfdfd',
+        backgroundColor:'#fff',
         flex:1,   
           
     },
@@ -203,6 +203,33 @@ const Styles = StyleSheet.create({
         fontWeight:'bold',
         padding:10,
     },
+    create_accont_text:{
+        fontSize:50,
+        marginLeft:35,
+        marginBottom:8,
+        fontWeight:'bold',
+    },
+    create_accont_wrapper:{
+        marginLeft:45, 
+        marginRight:45,
+        marginTop:35,
+        marginBottom:35,    
+    },
+    create_accont_name:{        
+        borderBottomWidth:1.5,
+        padding:12,
+        letterSpacing:1,
+        fontSize:20,
+        marginBottom:30,
+
+    },
+    create_accont_phone:{        
+        borderBottomWidth:1.5,
+        padding:12,
+        letterSpacing:1,
+        fontSize:20,     
+        marginBottom:30,
+    }
   });
   
   export default Styles;

@@ -4,6 +4,7 @@ export default {
   phone:'Phone',
   secretpin:'Secret Pin',
   login:'Log in',
+  signup:'Sign Up',
   forgotpassword:'Forgot Pin?',
   newaccount:'New Account',
   availablebalance:'Available Balance',
@@ -23,6 +24,8 @@ export default {
   received:'Received',
   scanqrcodetopay:'Scan the QR Code to Pay',
   paymentdetails:'Payment Details',
-  noactivity:'No Payment has made yet.'
+  noactivity:'No Payment has made yet.',
+  create:'Create',
+  account:'Account',
 
 };
