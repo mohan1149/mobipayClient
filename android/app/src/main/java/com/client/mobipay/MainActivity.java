@@ -1,4 +1,4 @@
-package com.mobipay;
+package com.client.mobipay;
 
 import com.facebook.react.ReactActivity;
 

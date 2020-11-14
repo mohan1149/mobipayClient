@@ -11,15 +11,30 @@ const Styles = StyleSheet.create({
       fontWeight:'800',
       textAlign:'center'
     },
+    hi:{
+        fontSize:35,
+        textAlign:'center',
+        fontWeight:'800',
+        margin:15,
+    },
     secret_pin_label:{
         textAlign:'center',
-        textTransform:'uppercase',
-        fontWeight:'bold',
-        fontSize:11,
+        //textTransform:'uppercase',
+        //fontWeight:'bold',
+        fontSize:13,
         opacity:0.5
     },
     logn_form:{
         margin:15,        
+    },
+    setup_secret_pin:{
+        marginTop:40,
+    },
+    setup_secret_pin_button:{
+        padding:10,
+        backgroundColor:'black',
+        borderRadius:60,         
+        alignSelf:'center',        
     },
     login_button:{
         padding:15,
@@ -27,6 +42,14 @@ const Styles = StyleSheet.create({
         borderRadius:60,
         width:120,      
         alignSelf:'center'
+    },
+    signup_button:{
+        padding:15,
+        backgroundColor:'black',
+        borderRadius:60,
+        width:120,      
+        alignSelf:'center',
+        marginTop:20,
     },
     login_button_text:{
         fontWeight: 'bold',
@@ -206,21 +229,28 @@ const Styles = StyleSheet.create({
     create_accont_text:{
         fontSize:50,
         marginLeft:35,
-        marginBottom:8,
+        marginBottom:0,
+        fontWeight:'bold',
+    },
+    setup_secretpin:{
+        fontSize:50,
+        marginLeft:35,
+        marginBottom:0,
         fontWeight:'bold',
     },
     create_accont_wrapper:{
-        marginLeft:45, 
-        marginRight:45,
-        marginTop:35,
-        marginBottom:35,    
+        marginLeft:30, 
+        marginRight:30,
+        marginTop:20,
+        marginBottom:20,    
     },
     create_accont_name:{        
-        borderBottomWidth:1.5,
-        padding:12,
-        letterSpacing:1,
-        fontSize:20,
-        marginBottom:30,
+        borderColor:'#CCC',
+        borderBottomWidth:1,
+        flex:1,
+        fontSize:16,
+        marginLeft:25,
+        marginRight:10,
 
     },
     create_accont_phone:{        

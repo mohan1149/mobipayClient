@@ -1,4 +1,4 @@
-package com.mobipay;
+package com.client.mobipay;
 
 import android.app.Application;
 import android.content.Context;

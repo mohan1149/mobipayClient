@@ -16,6 +16,8 @@ import Loading from './Loading';
 import UserActivity from './home/UserAcitivity';
 import CreatePayment from './payment/CreatePayment';
 import MakePayment from './payment/MakePayment';
+import UserOTP from './auth/UserOTP';
+import UserSecretSet from './auth/UserSecretSet';
 export default class Routes extends React.Component {
     constructor(props) {
         super(props);
@@ -39,14 +41,26 @@ export default class Routes extends React.Component {
                             headerShown: false
                         }} />
                     <Stack.Screen name="user-register" component={UserRegister}
-                        options={{
-                            headerShown: true,
+                        options={{                            
                             headerBackTitleVisible:false,
                             headerTintColor: 'black',
                             headerHideShadow: true,
                             headerTitle: I18n.t('signup'),
-
-                        }} />
+                        }} 
+                    />
+                    <Stack.Screen name="user-otp" component={UserOTP}
+                        options={{                            
+                            headerBackTitleVisible:false,
+                            headerTintColor: 'black',
+                            headerHideShadow: true,
+                            headerTitle: I18n.t('enterotp'),
+                        }} 
+                    />
+                    <Stack.Screen name="user-secret" component={UserSecretSet}
+                        options={{         
+                            headerShown:false,                 
+                        }} 
+                    />
                     <Stack.Screen name="home" component={UserHome}
                         options={{
                             headerShown: false

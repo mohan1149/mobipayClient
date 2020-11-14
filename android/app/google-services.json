@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "492364489071",
+    "firebase_url": "https://mobipay-online.firebaseio.com",
+    "project_id": "mobipay-online",
+    "storage_bucket": "mobipay-online.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492364489071:android:19b083e92a5de06745889a",
+        "android_client_info": {
+          "package_name": "com.client.mobipay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492364489071-a1mann8nlepo64mtjcirmu4df5grjag7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.client.mobipay",
+            "certificate_hash": "2516975deb48eb373c6e92ad88fa48e715852c15"
+          }
+        },
+        {
+          "client_id": "492364489071-rfideh8vhh3h73m8v705gjruaqb7gjl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBILE9VP8kkAo9K_ThxcH4WB99wsYx43Zs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492364489071-rfideh8vhh3h73m8v705gjruaqb7gjl7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

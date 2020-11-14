@@ -25,7 +25,16 @@ export default {
   scanqrcodetopay:'Scan the QR Code to Pay',
   paymentdetails:'Payment Details',
   noactivity:'No Payment has made yet.',
-  create:'Create',
+  create:'Create an',
   account:'Account',
-
+  phonenumber:'Phone Number',
+  enterotp:'Enter OTP',
+  hi:'Hi..!',
+  enterotptext:'Enter the OTP sent to your phone number',
+  enter:'Enter',
+  unabletosendotptitle:'Request Failed',
+  unabletosendotpText:'Unable to send OTP to your phone number, please try again.',
+  invalidotp:'Invalid OTP',
+  entercorrectotp:'Please enter the OTP sent to your phone number',
+  setupa:'Setup a',  
 };
