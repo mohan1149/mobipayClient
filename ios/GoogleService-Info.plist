@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>492364489071-a0vktutptf8co4t3752v3v68cgthu0k9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.492364489071-a0vktutptf8co4t3752v3v68cgthu0k9</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>492364489071-a1mann8nlepo64mtjcirmu4df5grjag7.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDKgBtq08rxCNQgUfB4F-6PN3xTG58ixT4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>492364489071</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.client.mobipay</string>
+	<key>PROJECT_ID</key>
+	<string>mobipay-online</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mobipay-online.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:492364489071:ios:c02c47ae630e18a845889a</string>
+	<key>DATABASE_URL</key>
+	<string>https://mobipay-online.firebaseio.com</string>
+</dict>
+</plist>

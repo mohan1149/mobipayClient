@@ -6,6 +6,7 @@ import {
     Text,
     View,
     TextInput,
+    Dimensions
 } from 'react-native';
 
 import { Button } from 'react-native-elements';
@@ -43,7 +44,7 @@ export default class UserRegister extends React.Component {
 
                     <ScrollView>
                         <View
-                            style={{ marginTop: 20 }}
+                            style={{ marginTop: Dimensions.get('screen').height/7 }}
                         >
                             <Text
                                 style={Styles.create_accont_text}
@@ -71,7 +72,7 @@ export default class UserRegister extends React.Component {
                                         backgroundColor:'#fff',
                                         borderBottomWidth:1,
                                         borderColor:'#CCC',
-                                        paddingBottom:0,                                                                                
+                                        //paddingBottom:5,                                                                                
                                     }}                                
                                 />
                                 <View style={{flex:1,flexDirection:'row',marginTop:20,marginLeft:10}}>
@@ -100,6 +101,7 @@ export default class UserRegister extends React.Component {
     componentDidMount(){
         let firebase_service = firebase.messaging();
         firebase_service.getToken().then((token)=>{
+            console.log(token);
             this.setState({
                 client_fcm_token:token,
             });

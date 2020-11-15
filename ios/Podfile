@@ -33,3 +33,5 @@ target 'mobipay-tvOS' do
 end
 permissions_path = '../node_modules/react-native-permissions/ios'
 pod 'Permission-Camera', :path => "#{permissions_path}/Camera.podspec"
+pod 'Firebase/Auth'
+pod 'Firebase/Core'

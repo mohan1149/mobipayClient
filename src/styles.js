@@ -30,12 +30,6 @@ const Styles = StyleSheet.create({
     setup_secret_pin:{
         marginTop:40,
     },
-    setup_secret_pin_button:{
-        padding:10,
-        backgroundColor:'black',
-        borderRadius:60,         
-        alignSelf:'center',        
-    },
     login_button:{
         padding:15,
         backgroundColor:'black',
@@ -43,13 +37,21 @@ const Styles = StyleSheet.create({
         width:120,      
         alignSelf:'center'
     },
+    enter_button:{
+        padding:15,
+        backgroundColor:'black',
+        borderRadius:60,
+        width:120,      
+        alignSelf:'center',
+        marginTop:80,
+    },
     signup_button:{
         padding:15,
         backgroundColor:'black',
         borderRadius:60,
         width:120,      
         alignSelf:'center',
-        marginTop:20,
+        marginTop:50,
     },
     login_button_text:{
         fontWeight: 'bold',
@@ -230,18 +232,20 @@ const Styles = StyleSheet.create({
         fontSize:50,
         marginLeft:35,
         marginBottom:0,
-        fontWeight:'bold',
+        fontWeight:'bold',      
     },
     setup_secretpin:{
         fontSize:50,
         marginLeft:35,
         marginBottom:0,
         fontWeight:'bold',
+        textAlign:'center',
     },
+    
     create_accont_wrapper:{
         marginLeft:30, 
         marginRight:30,
-        marginTop:20,
+        marginTop:50,
         marginBottom:20,    
     },
     create_accont_name:{        

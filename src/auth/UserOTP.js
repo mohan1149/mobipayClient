@@ -59,8 +59,8 @@ export default class UserOTP extends React.Component {
                                     }}
                                     containerStyle={{
                                         padding: 20,
-                                        marginBottom: 20,
-                                        marginTop:20,
+                                        marginBottom: 40,
+                                        marginTop:40,
                                         alignSelf: 'center'
                                     }}
                                     value={this.state.otp}
@@ -68,7 +68,7 @@ export default class UserOTP extends React.Component {
                                 />
                                 <Button
                                     title={I18n.t('enter')}
-                                    buttonStyle={Styles.login_button}
+                                    buttonStyle={Styles.enter_button}
                                     titleStyle={Styles.login_button_text}
                                     onPress={() => this.moveToSecretScreen()}
                                 />
@@ -83,7 +83,7 @@ export default class UserOTP extends React.Component {
     async componentDidMount(){
         try{            
             let phone_number = this.props.route.params.client_data.client_full_phone;            
-            confirmation = await auth().signInWithPhoneNumber(phone_number);
+            //confirmation = await auth().signInWithPhoneNumber(phone_number);
         }catch(error){
             console.log(error);
             Alert.alert(I18n.t('unabletosendotptitle'),I18n.t('unabletosendotpText'));
@@ -93,7 +93,7 @@ export default class UserOTP extends React.Component {
     
     async moveToSecretScreen(){ 
         try{
-            await confirmation.confirm(this.state.otp);
+            //await confirmation.confirm(this.state.otp);
             let client_data = this.props.route.params.client_data;
             this.props.navigation.navigate('user-secret',{client_data});            
         }catch(error){

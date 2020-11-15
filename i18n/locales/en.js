@@ -37,4 +37,5 @@ export default {
   invalidotp:'Invalid OTP',
   entercorrectotp:'Please enter the OTP sent to your phone number',
   setupa:'Setup a',  
+  save:'Save',
 };

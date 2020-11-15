@@ -6,7 +6,8 @@ import {
     TouchableOpacity,
     Text,
     View,
-    Alert
+    Alert,
+    Dimensions
 } from 'react-native';
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
 import { Button } from 'react-native-elements';
@@ -34,14 +35,14 @@ export default class UserSecretSet extends React.Component {
 
                     <ScrollView>
                         <View
-                            style={{ marginTop: 50 }}
+                            style={{ marginTop: Dimensions.get('screen').height / 7 }}
                         >
                             <Text
                                 style={Styles.setup_secretpin}
                             >
                                 {I18n.t('setupa')}
                             </Text>
-                            <Text style={Styles.create_accont_text}>
+                            <Text style={Styles.setup_secretpin}>
                                 {I18n.t('secretpin')}
                             </Text>
                             {/* <Text style={Styles.secret_pin_label}>{I18n.t('enterotptext')}</Text> */}
@@ -50,7 +51,7 @@ export default class UserSecretSet extends React.Component {
                             >
                                 <SmoothPinCodeInput
                                     codeLength={5}
-                                    autoFocus={true}                                    
+                                    autoFocus={true}
                                     password={true}
                                     mask='*'
                                     cellStyle={{
@@ -69,26 +70,13 @@ export default class UserSecretSet extends React.Component {
                                     value={this.state.secret_pin}
                                     onTextChange={secret_pin => this.setState({ secret_pin })}
                                 />
+                                <Button
+                                    buttonStyle={Styles.signup_button}
+                                    titleStyle={Styles.login_button_text}
+                                    title={I18n.t('save')}
+                                    onPress={()=>this.saveClient()}
+                                />
 
-                                <View 
-                                    style={{
-                                        marginTop:150,
-                                        zIndex:5,
-                                        alignSelf:'flex-end',
-                                        right:30,
-                                    }}
-                                >
-                                    <Button
-                                        buttonStyle={Styles.setup_secret_pin_button}
-                                        icon={
-                                            <Icon
-                                                name="arrow-forward"
-                                                size={40}
-                                                color="white"
-                                            />
-                                        }
-                                    />
-                                </View>
                             </View>
                         </View>
                     </ScrollView>
@@ -97,9 +85,9 @@ export default class UserSecretSet extends React.Component {
         );
     }
     componentDidMount() {
-        //console.log(this.props.route.params.client_data);
+        console.log(this.props.route.params.client_data);
     }
     saveClient() {
-
+        this.props.navigation.navigate('home');
     }
 }

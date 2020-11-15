@@ -8,6 +8,7 @@
 
 import React from 'react';
 import Routes from './src/routes';
+import firebase from '@react-native-firebase/app';
 export default class App extends React.Component {
   render() {
     return (
