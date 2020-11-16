@@ -2,24 +2,27 @@ import React from 'react';
 import {
     SafeAreaView,
     ScrollView,
-    StatusBar,
-    TouchableOpacity,
+    StatusBar,    
     Text,
     View,
     Alert,
-    Dimensions
+    Dimensions,
+    ActivityIndicator,
+    BackHandler
 } from 'react-native';
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
 import { Button } from 'react-native-elements';
 import I18n from './../../i18n/locales/i18n';
 import Styles from './../../src/styles';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-
+import axios from 'axios';
+import {CONSTANTS} from './../constants';
+import Modal from 'react-native-modal';
 export default class UserSecretSet extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             secret_pin: "",
+            isLoading:false,
         }
     }
     render() {
@@ -79,15 +82,44 @@ export default class UserSecretSet extends React.Component {
 
                             </View>
                         </View>
+                        <Modal
+                            isVisible={this.state.isLoading}
+                        >
+                            <View>
+                                <ActivityIndicator size="large" color="#fff"/>
+                            </View>
+                        </Modal>
                     </ScrollView>
                 </SafeAreaView>
             </>
         );
     }
     componentDidMount() {
-        console.log(this.props.route.params.client_data);
+        BackHandler.addEventListener("hardwareBackPress",()=>{
+            Alert.alert(I18n.t('wait'),I18n.t('waittext'));
+        })
+    }
+    componentWillUnmount(){
+        BackHandler.removeEventListener("hardwareBackPress");
     }
     saveClient() {
-        this.props.navigation.navigate('home');
+        this.setState({isLoading:true});
+        let client_data = this.props.route.params.client_data;
+        let url = CONSTANTS.API_SEVER + CONSTANTS.CLIENT_SIGNUP;        
+        axios.post(
+            url,
+            client_data
+        )
+        .then((response)=>{            
+            console.log(response);
+            this.setState({isLoading:true});
+            this.props.navigation.navigate('home');
+        })
+        .catch((error)=>{            
+            console.log(error);
+            this.setState({isLoading:false});
+            Alert.alert(I18n.t('networkerror'),I18n.t('accountfailed')); 
+            this.props.navigation.navigate('home');           
+        })        
     }
 }

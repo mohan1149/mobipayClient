@@ -1,4 +1,4 @@
-import React,{ useRef } from 'react';
+import React from 'react';
 import {
     SafeAreaView,
     ScrollView,
@@ -12,8 +12,6 @@ import {
 import { Button } from 'react-native-elements';
 import I18n from './../../i18n/locales/i18n';
 import Styles from './../../src/styles';
-import axios from 'axios';
-import {CONSTANTS} from './../constants';
 import PhoneInput from "react-native-phone-number-input";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import messaging from '@react-native-firebase/messaging';
@@ -101,7 +99,6 @@ export default class UserRegister extends React.Component {
     componentDidMount(){
         let firebase_service = firebase.messaging();
         firebase_service.getToken().then((token)=>{
-            console.log(token);
             this.setState({
                 client_fcm_token:token,
             });
@@ -115,18 +112,7 @@ export default class UserRegister extends React.Component {
             client_full_phone:this.state.client_full_phone,
             client_fcm_token:this.state.client_fcm_token,
         }
-        this.props.navigation.navigate('user-otp',{client_data});
-        // let url = CONSTANTS.API_SEVER + CONSTANTS.CLIENT_SIGNUP;        
-        // axios.post(
-        //     url,
-        //     client_data
-        // )
-        // .then((response)=>{
-        //     console.log(response);
-        // })
-        // .catch((error)=>{
-        //     console.log(error);
-        // })     
+        this.props.navigation.navigate('user-otp',{client_data});             
     }
 
 }

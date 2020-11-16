@@ -38,4 +38,9 @@ export default {
   entercorrectotp:'Please enter the OTP sent to your phone number',
   setupa:'Setup a',  
   save:'Save',
+  networkerror:'Unable to process.',
+  accountfailed:'Failed to set up your account. Please try again after some time.',
+  wait:'Plase wait!',
+  waittext:'Hold on, your account is creating.',
+
 };
